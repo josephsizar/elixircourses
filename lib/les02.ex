@@ -25,9 +25,23 @@ defmodule Les02 do
     # Les02.lesson06()
     # Les02.lesson07()
     # Les02.lesson08()
-    Les02.lesson09()
+    # Les02.lesson09()
+    Les02.lesson10()
 
     Supervisor.start_link([], strategy: :one_for_one)
+
+  end
+
+
+  def lesson10 do
+
+    grades = [10,20,30,40,29]
+
+    for n <- grades, do: IO.puts(n)
+
+    new_l = for n <- grades, do: n-20
+
+    IO.inspect(new_l)
 
   end
 
